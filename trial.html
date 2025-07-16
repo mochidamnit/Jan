@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janxo Tennis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Patrick Hand', cursive;
+      background-color: #fff;
+      color: #333;
+      height: 100%;
+    }
+
+    .hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('bg1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      gap: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .nav-buttons button {
+      background: white;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .nav-buttons button + button {
+      margin-left: 10px;
+    }
+
+    .hero {
+      max-width: 600px;
+      margin-top: auto;
+      padding: 20px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .subscribe-box {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .subscribe-box input {
+      padding: 10px;
+      border: none;
+      width: 200px;
+    }
+
+    .subscribe-box button {
+      padding: 10px 15px;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      margin-top: auto;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      color: white;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about .about-text {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .about .about-text span {
+      display: inline-block;
+      background: #eee;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .about .about-text p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .about .about-text button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .about .about-images {
+      flex: 1 1 300px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .about .image-card {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .about .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .about .image-card .label,
+    .about .image-card .text,
+    .about .image-card .icon {
+      position: absolute;
+      color: white;
+    }
+
+    .about .image-card .label {
+      top: 10px;
+      left: 10px;
+      background: #eee;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+    }
+
+    .about .image-card .text {
+      bottom: 15px;
+      left: 15px;
+      font-size: 1.2rem;
+    }
+
+    .about .image-card .icon {
+      bottom: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+    }
+
+    section.cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 60px 30px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .card a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<div class="hero-image">
+    <nav>
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <div class="logo">JANXO_</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Coaches</a></li>
+          <li><a href="#">Updates</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons">
+        <button>Enroll</button>
+        <button>Login</button>
+      </div>
+    </nav>
+
+  <div class="hero">
+    <h1>BIG WORDS TENNIS BALLS??</h1>
+    <p>Where your tennis balls act like they have so goddamn *fling*?</p>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="Your email">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <div class="social-icons">
+    <a href="#">FB</a>
+    <a href="#">IG</a>
+  </div>
+</div>
+
+
+
+  <section class="about">
+  <div class="about-text">
+    <span>Our Mission</span>
+    <p>
+      At <strong>JANXO_</strong>, we are passionate about providing a top-notch environment for athletes of all levels.
+    </p>
+    <button>
+      Lorem Ipsum →
+    </button>
+  </div>
+  <div class="about-images">
+    <div class="image-card">
+      <img src="2.jpg">
+      <div class="label">Our Mission</div>
+      <div class="text">Lorem ipsum lorem ipsum<br>Lorem Ipsum</div>
+      <div class="icon">↗</div>
+    </div>
+    <div class="image-card">
+      <img src="3.jpg">
+      <div class="label">Mission</div>
+      <div class="text">Lorem ipsum lorem ipsum<br>Lorem Ipsum</div>
+      <div class="icon">↗</div>
+    </div>
+  </div>
+</section>
+
+  <section class="cards">
+    <div class="card">
+      <img src="1.jpg" alt="">
+      <div class="card-text">Lorem Ipsum</div>
+    </div>
+
+    <div class="card">
+      <img src="2.jpg" alt="">
+      <div class="card-text">Our Coaches</div>
+      <a href="#">↗</a>
+    </div>
+
+    <div class="card">
+      <img src="3.jpg" alt="">
+      <div class="card-text">Testimonials</div>
+    </div>
+
+    <div class="card">
+      <img src="4.jpg" alt="">
+      <div class="card-text">Our Facilities</div>
+    </div>
+  </section>
+</body>
+</html>
+
