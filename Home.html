@@ -144,7 +144,7 @@
 
 .hero, .hero-right {
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
   color: white;
 }
 
@@ -153,6 +153,7 @@
   flex: 1;
   color: white;
   max-width: 600px;
+
 }
 
 .hero-right h2 {
@@ -179,7 +180,7 @@
       font-weight: 300;
     }
 
-    .subscribe-box {
+    /*.subscribe-box {
       margin-top: 100px;
       display: flex;
       overflow: hidden;
@@ -205,7 +206,7 @@
 
     .subscribe-box input::placeholder {
         color: white;
-        opacity: 1; /* Make sure it's not faded */
+        opacity: 1; 
       }
 
 
@@ -221,7 +222,7 @@
         font-size: 1.2rem;
         font-weight: 300;
 
-    }
+    }*/
 
         .locations-container {
           margin-top: 70px;
@@ -229,12 +230,18 @@
             align-items: center;
             text-align: center;
             gap: 20px;
-            font-size: 16px;
+            font-size: 1.2rem;
         }
 
         .location-item {
-            font-weight: 500;
+            font-weight: 300;
             white-space: nowrap;
+        }
+
+        .more-courts-link{
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: white;
         }
 
         .separator {
@@ -252,13 +259,58 @@
         width: auto;
       }
 
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 100px;
+  display:flex;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display:flex;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color:#fff ;
+
+}
+
+.flip-card-back {
+  background-color: transparent;
+  color: #fff;
+  transform: rotateX(180deg);
+}
+
+
+
     .about {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 40px;
-      padding: 60px 30px;
+      padding: 60px 20px;
       max-width: 1700px;
       margin: auto;
     }
@@ -366,12 +418,13 @@
   gap: 60px;
   margin: 0 auto;
   flex-wrap: wrap; /* Already good for responsiveness */
+  padding-bottom: 100px;
     }
 
     .card {
         position: relative;
-  width: 350px;      /* fixed width */
-    aspect-ratio: 7 / 8; /* Maintain shape instead of fixed height */
+        width: 350px;      /* fixed width */
+        aspect-ratio: 7 / 8; /* Maintain shape instead of fixed height */
 
   display: flex;
   flex-direction: column;
@@ -450,6 +503,244 @@
 
 
 
+.testimonials-section {
+  background-color: #f6f6f6;
+  padding: 70px 20px;
+}
+
+.testimonials-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.testimonials-header {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+     .testimonials {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin:20px 0;
+    }
+
+    .testimonials-card {
+      background: white;
+      padding: 30px;
+      width: 500px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .quote-mark {
+      font-size: 5rem;
+      font-weight: 900;
+    }
+
+    .headline {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .testimonials-content {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+.contact-section {
+  padding: 90px 110px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1560px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 700px;
+
+}
+
+.contact-left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 24px;
+}
+
+.contact-left p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Lexend', sans-serif;
+}
+
+.contact-form button {
+  font-family: 'Lexend', sans-serif;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #fff;
+  color: black;
+  border: 2px solid black;
+}
+
+
+
+
+
+    .site-footer {
+      background-color: #cce6ff; /* light blue like your image */
+      color: black;
+      padding: 60px 20px 20px;
+      font-family: "Lexend", sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1600px;
+      padding: 0px 20px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-left {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .slogan {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 150px;
+    }
+
+    .footer-logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      display: inline-block;
+      border-radius: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-column{
+      text-align: center;
+    }
+
+    .footer-column h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #fff;
+    }
+
+
+
+
+
+
 /* ================
    1. SMALL PHONES (≤ 480px)
    ================ */
@@ -462,21 +753,31 @@
 
   .hero h1 {
     font-size: 2rem;
+    margin-top: 60px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-right p {
+    font-size: 1rem;
+  }
+
+  .locations-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .subscribe-box {
     flex-direction: column;
   }
 
-  .subscribe-box input,
-  .subscribe-box button {
-    padding: 12px;
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .card-text,
-  .card-text2 {
+  .card-text, .card-text2 {
     font-size: 1.3rem;
   }
 
@@ -487,6 +788,36 @@
   .hamburger-button {
     display: inline-block;
   }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+    aspect-ratio: 4/5;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-images {
+    flex-direction: column;
+  }
+
+  .testimonials-card {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 10px;
+  }
 }
 
 /* ================
@@ -495,19 +826,21 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .hero-content {
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 20px;
+    gap: 40px;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
-  .about {
-    padding: 40px 20px;
+  .hero-right h2 {
+    font-size: 2rem;
   }
 
-  .about-images {
-    flex-direction: column;
+  .locations-container {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   nav ul {
@@ -518,15 +851,35 @@
     display: inline-block;
   }
 
-  .card {
-    height: 280px;
+  .cards {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .card-text,
-  .card-text2 {
-    font-size: 1.5rem;
+  .card {
+    width: 90%;
+    max-width: 400px;
+    aspect-ratio: 4/5;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-images {
+    flex-direction: column;
+  }
+
+  .testimonials-card {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
   }
 }
+
 
 /* ================
    3. TABLETS (769px–1024px)
@@ -535,10 +888,34 @@
   .hero-content {
     flex-direction: column;
     padding: 40px;
+    gap: 40px;
   }
 
   .hero h1 {
     font-size: 3rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: inline-block;
+  }
+
+  .cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 45%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .about {
+    flex-direction: column;
   }
 
   .about-images {
@@ -546,20 +923,23 @@
     gap: 20px;
   }
 
-  nav ul {
-    gap: 30px;
+  .testimonials-card {
+    width: 100%;
   }
 
-  .card {
-    height: 320px;
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 0 40px;
   }
 }
+
 
 /* ================
    4. LAPTOPS & SMALL DESKTOPS (1025px–1440px)
    ================ */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .hero-content {
+    flex-direction: row;
     padding: 60px 80px;
   }
 
@@ -567,27 +947,45 @@
     font-size: 3.5rem;
   }
 
+  nav ul {
+    display: flex;
+    gap: 40px;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
   .card {
-    height: 400px;
+    height: auto;
+    width: 30%;
+    max-width: 400px;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .testimonials-card {
+    width: 30%;
+  }
+
+  .contact-wrapper {
+    flex-direction: row;
+    gap: 60px;
   }
 }
+
 
 /* ================
    5. LARGE DESKTOPS (≥ 1441px)
    ================ */
 @media (min-width: 1441px) {
   .hero-content {
-    max-width: 2000px;
+    max-width: 1600px;
     margin: auto;
     padding: 60px 100px;
-  }
-
-  .about {
-    max-width: 1600px;
-  }
-
-  section.cards {
-    max-width: 1600px;
   }
 
   .hero h1 {
@@ -595,14 +993,34 @@
   }
 
   .card {
-    height: 500px;
+    width: 22%;
+    max-width: 360px;
   }
 
-  .card-text,
-  .card-text2 {
+  .card-text, .card-text2 {
     font-size: 2.2rem;
   }
+
+  .about {
+    max-width: 1700px;
+    margin: auto;
+  }
+
+  .testimonials-card {
+    width: 30%;
+  }
+
+  .contact-wrapper {
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 80px;
+  }
+
+  nav ul {
+    gap: 60px;
+  }
 }
+
 
 
 @media (max-width: 1024px) {
@@ -625,13 +1043,13 @@
 <body>
 <div class="hero-image">
     <nav>
-      <div style="display: flex; align-items: center; gap: 60px;">
+      <div style="display: flex; align-items: center; gap: 80px;">
         <div class="logo"><img src="logo.png"></div>
         <ul>
-          <li><a href="#"><img src="home-icon.png" class="nav-icon"> Home</a></li>
-          <li><a href="#"><img src="coach-icon.png" class="nav-icon"> Our Coaches</a></li>
-          <li><a href="#"><img src="updates-icon.png" class="nav-icon"> Updates</a></li>
-          <li><a href="#"><img src="contact-icon.png" class="nav-icon"> Contact Us</a></li>
+          <li><a href="#"><img src="home.png" class="nav-icon"> Home</a></li>
+          <li><a href="coaches.html"><img src="coaches.png" class="nav-icon"> Our Coaches</a></li>
+          <li><a href="#"><img src="star.png" class="nav-icon"> Updates</a></li>
+          <li><a href="#contact"><img src="contact us.png" class="nav-icon"> Contact Us</a></li>
         </ul>
       </div>
       <div class="nav-buttons">
@@ -639,9 +1057,9 @@
           <button class="hamburger-button">☰ Menu</button>
           <div class="dropdown-content">
             <a href="#">Home</a>
-            <a href="#">Our Coaches</a>
+            <a href="coaches.html">Our Coaches</a>
             <a href="#">Updates</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
         <a href="#" class="member-button">Be a member</a>
@@ -651,12 +1069,12 @@
   <div class="hero">
     <h1>HIT THEM TENNIS BALLS??</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-
+<!-- 
     <div class="subscribe-box">
       <input type="email" placeholder="Your email">
       <button>Subscribe</button>
     </div>
-
+-->
     <div class="locations-container">
         <span class="location-item">Somerset<br>Court</span>
         <div class="separator"></div>
@@ -676,9 +1094,31 @@
 
   </div>
   <div class="hero-right">
-    <p>Train with the best coaches and reach your full potential. Become a part of our tennis family today!</p>
-  </div>
+              
 
+      <div class="flip-card">
+        <img src="dots.png" style="height: 30px;">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+         <img src="circle.png" style="height: 30px;">
+         <img src="circle.png" style="height: 30px;">
+         <img src="circle.png" style="height: 30px;">
+            <p>Trusted by 80K Athletes</p>
+          </div>
+          <div class="flip-card-back">
+         <img src="circle.png" style="height: 30px;">
+         <img src="circle.png" style="height: 30px;">
+         <img src="circle.png" style="height: 30px;">
+            <p>Featured Coaches</p> 
+
+          </div>
+        </div>
+      </div>
+    <div class="email">
+      <p>email :  janxotennis.com@gmail.com</p>
+    </div>
+    </div>
+  </div>
 </div>
 
 
@@ -739,6 +1179,142 @@
       <div class="card-text2">Our Facilities</div>
     </div>
   </section>
+
+  <section class="testimonials-section">
+    <div class="testimonials-container">
+    <h2 class="testimonials-header">Testimonials</h2>
+
+
+  <div class="testimonials">
+    <div class="testimonials-card">
+      <div class="quote-mark">“</div>
+      <div class="headline">BIG WORDS!!</div>
+      <div class="testimonials-content">
+        Lorem ipsum reminds reminds. <br>
+        More expectations and more and more wow-e flavor patterns. <br>
+        Lorem ipsum reminds reminds. <br>
+        More expectations and more and more wow-e flavor patterns.
+      </div>
+      <div class="name">First Last Name</div>
+      <div class="title">Title</div>
+    </div>
+
+    <div class="testimonials-card">
+      <div class="quote-mark">“</div>
+      <div class="headline">BIG WORDS!!</div>
+      <div class="testimonials-content">
+        Lorem ipsum reminds reminds. <br>
+        More expectations and more and more wow-e flavor patterns. <br>
+        Lorem ipsum reminds reminds. <br>
+        More expectations and more and more wow-e flavor patterns.
+      </div>
+      <div class="name">First Last Name</div>
+      <div class="title">Title</div>
+    </div>
+
+    <div class="testimonials-card">
+      <div class="quote-mark">“</div>
+      <div class="headline">BIG WORDS!!</div>
+      <div class="testimonials-content">
+        Lorem ipsum reminds reminds. <br>
+        More expectations and more and more wow-e flavor patterns. <br>
+        Lorem ipsum reminds reminds. <br>
+        More expectations and more and more wow-e flavor patterns.
+      </div>
+      <div class="name">First Last Name</div>
+      <div class="title">Title</div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-wrapper">
+    <div class="contact-left">
+      <h2>Contact Us</h2>
+      <p>
+        Want to improve your swing or just getting started? <br />
+        Fill out the form — we will match you to the right coach.
+      </p>
+    </div>
+
+    <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
+<div class="form-group">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p class="slogan">
+        <strong>Slogan Slogan</strong><br>
+        You play, we play, <br>
+        everyone plays. Yay!
+      </p>
+      <div class="footer-logo"><img src="logo.png"></div>
+            
+
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Facilities</h4>
+        <ul>
+          <li><a href="#">Court 123</a></li>
+          <li><a href="#">Court 245</a></li>
+          <li><a href="#">Court 346</a></li>
+          <li><a href="#">Court Sun</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Vision</a></li>
+          <li><a href="#">Our Coaches</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Janxo Sports. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
 </body>
 </html>
 

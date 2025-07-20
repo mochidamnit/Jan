@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janxo Tennis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: "Lexend", sans-serif;
+      background-color: #fff;
+      color: #333;
+      height: 100%;
+    }
+
+    .hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('bg1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      gap: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 60px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    .nav-icon {
+      height: 16px;
+      width: 16px;
+      margin-right: 8px;
+      vertical-align: middle;
+    } 
+    .logo{
+      width: auto;
+      height: 20px;
+    }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-button {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 30px; /* Makes it curved/oval */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.hamburger-button:hover {
+  background-color: #eee;
+}
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #fff;
+      min-width: 140px;
+      width: 200px;
+      z-index: 1;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      padding: 10px 14px;
+      display: block;
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .member-button {
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 10px 22px;
+      background-color: #fff;
+      color: #7d4b3c;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .member-button:hover {
+      background-color: #7d4b3c;
+      color: white;
+    }
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;       /* or use 'center' for vertical alignment */
+  gap: 60px;
+  padding: 40px 20px;          /* reduce side padding */
+  max-width: 1100px;           /* constrain content width */
+  margin: 0 auto;              /* center in parent container */
+  width: 100%;
+}
+
+.hero, .hero-right {
+  flex: 1;
+  max-width: 600px;
+  color: white;
+}
+
+
+.hero-right {
+  flex: 1;
+  color: white;
+  max-width: 600px;
+}
+
+.hero-right h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-right p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+    .hero h1 {
+      margin-top: 120px;
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .subscribe-box {
+      margin-top: 100px;
+      display: flex;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid white;
+      max-width: 500px;
+      font-family: "Lexend", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .subscribe-box input {
+      flex: 1;
+      padding: 12px 20px;
+      border: none;
+      outline: none;
+      font-family: "Lexend", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      background: transparent;
+      color: white;
+    }
+
+    .subscribe-box input::placeholder {
+        color: white;
+        opacity: 1; /* Make sure it's not faded */
+      }
+
+
+    .subscribe-box button {
+        background-color: white;
+        color: #B65A2B;
+        border: none;
+        border-radius: 30px;
+        padding: 0 24px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: "Lexend", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
+
+    }
+
+        .locations-container {
+          margin-top: 70px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+
+        .location-item {
+            font-weight: 300;
+            white-space: nowrap;
+        }
+
+        .more-courts-link{
+            
+        }
+
+        .separator {
+            width: 2px;
+            height: 50px;
+            background-color: #fff;
+            margin: 0 10px;
+        }
+        .socialmedia{
+          margin-top: 100px;
+        }
+
+      .socialmedia img{
+        height: 30px;
+        width: auto;
+      }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 30px;
+      max-width: 1700px;
+      margin: auto;
+    }
+
+    .about .about-text {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .about .about-text span {
+      display: inline-block;
+      background: #eee;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .about .about-text p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .about .about-text button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 30px;
+      font-family: "Lexend", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .about .about-images {
+      flex: 1 1 300px;
+      display: flex;
+      gap: 40px;
+    }
+
+    .about .image-card {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .about .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .about .image-card .label,
+    .about .image-card .text,
+    .about .image-card .icon {
+      position: absolute;
+      color: white;
+    }
+
+    .about .image-card .label {
+      top: 20px;
+      left: 20px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 4px 10px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    .about .image-card .text {
+      bottom: 15px;
+      left: 15px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .about .image-card .icon {
+      background-color: white;
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;      
+      color: 	#C1E1C1;
+      font-size: 1.3rem;
+      font-weight: 900;
+
+    }
+
+    section.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Already good for responsiveness */
+    }
+
+    .card {
+        position: relative;
+  width: 350px;      /* fixed width */
+    aspect-ratio: 7 / 8; /* Maintain shape instead of fixed height */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+    }
+
+    .card .label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #eee;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      z-index: 2;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .cards .card .icon {
+      background-color: white;
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;      
+      color: 	#B65A2B;
+      font-size: 1.3rem;
+      font-weight: 900;
+
+    }
+    .card-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 400;
+
+    }
+    .card-text2 {
+      position: absolute;
+      top: 50px;      
+      left: 20px;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    .card a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 2.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+
+
+/* ================
+   1. SMALL PHONES (≤ 480px)
+   ================ */
+@media (max-width: 480px) {
+  .hero-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .subscribe-box {
+    flex-direction: column;
+  }
+
+  .subscribe-box input,
+  .subscribe-box button {
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .card-text,
+  .card-text2 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: inline-block;
+  }
+}
+
+/* ================
+   2. PHONES (481px–768px)
+   ================ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about-images {
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: inline-block;
+  }
+
+  .card {
+    height: 280px;
+  }
+
+  .card-text,
+  .card-text2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================
+   3. TABLETS (769px–1024px)
+   ================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  .card {
+    height: 320px;
+  }
+}
+
+/* ================
+   4. LAPTOPS & SMALL DESKTOPS (1025px–1440px)
+   ================ */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-content {
+    padding: 60px 80px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .card {
+    height: 400px;
+  }
+}
+
+/* ================
+   5. LARGE DESKTOPS (≥ 1441px)
+   ================ */
+@media (min-width: 1441px) {
+  .hero-content {
+    max-width: 2000px;
+    margin: auto;
+    padding: 60px 100px;
+  }
+
+  .about {
+    max-width: 1600px;
+  }
+
+  section.cards {
+    max-width: 1600px;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .card {
+    height: 500px;
+  }
+
+  .card-text,
+  .card-text2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90vw;
+    max-width: 400px;
+    aspect-ratio: 7 / 8;
+    margin-bottom: 20px;
+
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="hero-image">
+    <nav>
+      <div style="display: flex; align-items: center; gap: 60px;">
+        <div class="logo"><img src="logo.png"></div>
+        <ul>
+          <li><a href="#"><img src="home-icon.png" class="nav-icon"> Home</a></li>
+          <li><a href="#"><img src="coach-icon.png" class="nav-icon"> Our Coaches</a></li>
+          <li><a href="#"><img src="updates-icon.png" class="nav-icon"> Updates</a></li>
+          <li><a href="#"><img src="contact-icon.png" class="nav-icon"> Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons">
+        <div class="dropdown">
+          <button class="hamburger-button">☰ Menu</button>
+          <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Our Coaches</a>
+            <a href="#">Updates</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <a href="#" class="member-button">Be a member</a>
+      </div>
+    </nav>
+<div class="hero-content">
+  <div class="hero">
+    <h1>HIT THEM TENNIS BALLS??</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+
+    <div class="subscribe-box">
+      <input type="email" placeholder="Your email">
+      <button>Subscribe</button>
+    </div>
+
+    <div class="locations-container">
+        <span class="location-item">Somerset<br>Court</span>
+        <div class="separator"></div>
+        <span class="location-item">Admiralty<br>Court</span>
+        <div class="separator"></div>
+        <span class="location-item">Blairhill<br>Court</span>
+        <div class="separator"></div>
+        <a href="#" class="more-courts-link">30+ more<br>quality courts</a>
+    </div>
+
+
+    <div class="socialmedia">
+        <a href="#"><img src="ig.png" alt=""></a>
+        <a href="#"><img src="" alt=""></a>
+    </div>
+
+
+  </div>
+  <div class="hero-right">
+    <p>Train with the best coaches and reach your full potential. Become a part of our tennis family today!</p>
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+  <section class="about">
+  <div class="about-text">
+    <span>Our Mission</span>
+    <p>
+      At <strong>COMPANY</strong>, we are passionate about providing a top-notch environment for athletes of all levels.
+    </p>
+    <button>
+      Lorem Ipsum →
+    </button>
+  </div>
+  <div class="about-images">
+    <div class="image-card">
+      <img src="6.jpg">
+      <div class="label">Our Mission</div>
+      <div class="text">Lorem ipsum lorem ipsum<br>Lorem Ipsum</div>
+      <div class="icon">↗</div>
+
+    </div>
+    <div class="image-card">
+      <img src="5.jpg">
+      <div class="label">Mission</div>
+      <div class="text">Lorem ipsum lorem ipsum<br>Lorem Ipsum</div>
+      <div class="icon">↗</div>
+    </div>
+  </div>
+</section>
+
+  <section class="cards">
+
+    <div class="card">
+      <img src="1.jpg" alt="">
+      <div class="label">Our Mission</div>
+      <div class="card-text2">Lorem Ipsum</div>
+    </div>
+
+    <div class="card">
+      <img src="2.jpg" alt="">
+      <div class="label">Our Mission</div>
+      <div class="card-text">Our Coaches</div>
+      <div class="icon">↗</div>
+
+    </div>
+
+    <div class="card">
+      <img src="3.jpg" alt="">
+      <div class="card-text">Testimonials</div>
+    </div>
+
+    <div class="card">
+      <img src="4.jpg" alt="">
+      <div class="card-text2">Our Facilities</div>
+    </div>
+  </section>
+</body>
+</html>
+
