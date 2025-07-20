@@ -140,7 +140,7 @@
   align-items: flex-end;       /* or use 'center' for vertical alignment */
   gap: 60px;
   padding: 40px 20px;          /* reduce side padding */
-  max-width: 1100px;           /* constrain content width */
+  max-width: 1700PX;           /* constrain content width */
   margin: 0 auto;              /* center in parent container */
   width: 100%;
 }
@@ -518,7 +518,7 @@
 }
 
 .testimonials-header {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 900;
   margin-bottom: 40px;
 }
@@ -572,7 +572,7 @@
     }
 
 .contact-section {
-  padding: 90px 110px;
+  padding: 30px;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -776,9 +776,6 @@
     gap: 10px;
   }
 
-  .subscribe-box {
-    flex-direction: column;
-  }
 
   .card-text, .card-text2 {
     font-size: 1.3rem;
@@ -787,14 +784,23 @@
   nav ul {
     display: none;
   }
+  .member-button{
+    display: none;
+  }
 
   .hamburger-button {
     display: inline-block;
   }
-
+  
+  .separator{
+    display: none;
+  }
   .cards {
     flex-direction: column;
     align-items: center;
+  }
+  .flip-card{
+    display: none;
   }
 
   .card {
@@ -819,7 +825,7 @@
   .contact-wrapper {
     flex-direction: column;
     gap: 40px;
-    padding: 0 10px;
+    justify-content: center;
   }
 }
 
@@ -853,7 +859,9 @@
   .hamburger-button {
     display: inline-block;
   }
-
+  .flip-card{
+    display: none;
+  }
   .cards {
     flex-direction: column;
     align-items: center;
@@ -867,11 +875,18 @@
 
   .about {
     flex-direction: column;
+    
   }
 
   .about-images {
-    flex-direction: column;
+        flex-direction: column;
+    align-items: center;
   }
+    .image-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
 
   .testimonials-card {
     width: 100%;
@@ -879,7 +894,6 @@
 
   .contact-wrapper {
     flex-direction: column;
-    padding: 0 20px;
   }
 }
 
@@ -892,6 +906,7 @@
     flex-direction: column;
     padding: 40px;
     gap: 40px;
+
   }
 
   .hero h1 {
@@ -922,12 +937,15 @@
   }
 
   .about-images {
-    flex-direction: row;
-    gap: 20px;
+        flex-direction: row;
+    align-items: center;
+  }
+    .image-card {
+    width: 30%;
   }
 
   .testimonials-card {
-    width: 100%;
+    width: 30%;
   }
 
   .contact-wrapper {
@@ -966,8 +984,11 @@
   }
 
   .about-images {
-    flex-direction: row;
-    gap: 30px;
+        flex-direction: column;
+    align-items: center;
+  }
+    .image-card {
+    width: 90%;
   }
 
   .testimonials-card {
@@ -996,8 +1017,8 @@
   }
 
   .card {
-    width: 22%;
-    max-width: 360px;
+    width: 21%;
+    max-width: 370px;
   }
 
   .card-text, .card-text2 {
@@ -1009,9 +1030,7 @@
     margin: auto;
   }
 
-  .testimonials-card {
-    width: 30%;
-  }
+
 
   .contact-wrapper {
     max-width: 1600px;
@@ -1026,20 +1045,6 @@
 
 
 
-@media (max-width: 1024px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90vw;
-    max-width: 400px;
-    aspect-ratio: 7 / 8;
-    margin-bottom: 20px;
-
-  }
-}
 
 </style>
 </head>

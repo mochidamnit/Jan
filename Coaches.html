@@ -19,13 +19,16 @@
       background-color: #fff;
       color: #333;
       height: 100%;
+        max-width: 100vw;
+  overflow-x: hidden;
+
     }
 
     .hero-image {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('bg1.jpg') no-repeat center center/cover;
+    background: url('coaches1.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -137,14 +140,14 @@
   align-items: flex-end;       /* or use 'center' for vertical alignment */
   gap: 60px;
   padding: 40px 20px;          /* reduce side padding */
-  max-width: 1100px;           /* constrain content width */
+  max-width: 1700PX;           /* constrain content width */
   margin: 0 auto;              /* center in parent container */
   width: 100%;
 }
 
 .hero, .hero-right {
   flex: 1;
-  max-width: 600px;
+  max-width: 500px;
   color: white;
 }
 
@@ -152,12 +155,13 @@
 .hero-right {
   flex: 1;
   color: white;
-  max-width: 600px;
+  max-width: 500px;
+
 }
 
-.hero-right h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
+.hero-right h3 {
+  font-size: 2rem;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -179,52 +183,34 @@
       font-weight: 300;
     }
 
-    .subscribe-box {
-      margin-top: 100px;
-      display: flex;
-      overflow: hidden;
-      border-radius: 30px;
-      border: 1px solid white;
-      max-width: 500px;
-      font-family: "Lexend", sans-serif;
+    .hero h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+
+    .contact-button {
+      width: auto;
       font-size: 1.2rem;
       font-weight: 300;
+      padding: 10px 22px;
+      background-color: #fff;
+      color: #2b4335;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    .subscribe-box input {
-      flex: 1;
-      padding: 12px 20px;
-      border: none;
-      outline: none;
-      font-family: "Lexend", sans-serif;
-      font-size: 1.2rem;
-      font-weight: 300;
-      background: transparent;
+      .contact-button:hover {
+      background-color: #2b4335;
       color: white;
     }
 
-    .subscribe-box input::placeholder {
-        color: white;
-        opacity: 1; /* Make sure it's not faded */
-      }
-
-
-    .subscribe-box button {
-        background-color: white;
-        color: #B65A2B;
-        border: none;
-        border-radius: 30px;
-        padding: 0 24px;
-        font-size: 18px;
-        cursor: pointer;
-        font-family: "Lexend", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 300;
-
-    }
 
         .locations-container {
-          margin-top: 70px;
+          margin-top: 40px;
+          margin-bottom: 40px;
             display: flex;
             align-items: center;
             text-align: center;
@@ -238,7 +224,9 @@
         }
 
         .more-courts-link{
-            
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: white;
         }
 
         .separator {
@@ -248,7 +236,9 @@
             margin: 0 10px;
         }
         .socialmedia{
-          margin-top: 100px;
+          margin-top: 40px;
+                    margin-bottom: 40px;
+
         }
 
       .socialmedia img{
@@ -256,201 +246,97 @@
         width: auto;
       }
 
-    .about {
+.text-mobile {
+  width: 100%;
+  display: none; /* hidden by default */
+  background-color: #2b4335; /* green */
+  color: white;
+  padding: 2rem;
+}
+
+
+    .site-footer {
+      background-color: #cce6ff; /* light blue like your image */
+      color: black;
+      padding: 60px 20px 20px;
+      font-family: "Lexend", sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1600px;
+      padding: 0px 20px;
+      margin: auto;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 30px;
-      max-width: 1700px;
-      margin: auto;
-    }
-
-    .about .about-text {
-      flex: 1 1 300px;
-      max-width: 500px;
-    }
-
-    .about .about-text span {
-      display: inline-block;
-      background: #eee;
-      padding: 4px 10px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-
-    .about .about-text p {
-      font-size: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .about .about-text button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      cursor: pointer;
-      border: none;
-      background: black;
-      color: white;
-      border-radius: 30px;
-      font-family: "Lexend", sans-serif;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-
-    .about .about-images {
-      flex: 1 1 300px;
-      display: flex;
+      justify-content: space-between;
       gap: 40px;
     }
 
-    .about .image-card {
+    .footer-left {
       flex: 1;
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
+      min-width: 250px;
     }
 
-    .about .image-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
+    .slogan {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 150px;
     }
 
-    .about .image-card .label,
-    .about .image-card .text,
-    .about .image-card .icon {
-      position: absolute;
-      color: white;
-    }
-
-    .about .image-card .label {
-      top: 20px;
-      left: 20px;
-      background: transparent;
+    .footer-logo {
+      font-size: 2.5rem;
+      font-weight: 700;
       color: #fff;
-      border: 1px solid #fff;
-      padding: 4px 10px;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 300;
+      display: inline-block;
+      border-radius: 8px;
     }
 
-    .about .image-card .text {
-      bottom: 15px;
-      left: 15px;
-      font-size: 1.2rem;
-      font-weight: 300;
+    .footer-links {
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-column{
+      text-align: center;
     }
 
-    .about .image-card .icon {
-      background-color: white;
-      border-radius: 50%;
-      padding: 10px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;      
-      color: 	#C1E1C1;
+    .footer-column h4 {
       font-size: 1.3rem;
-      font-weight: 900;
-
+      margin-bottom: 15px;
+      font-weight: 700;
     }
 
-    section.cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Already good for responsiveness */
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
     }
 
-    .card {
-        position: relative;
-  width: 350px;      /* fixed width */
-    aspect-ratio: 7 / 8; /* Maintain shape instead of fixed height */
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #fff;
+    .footer-column ul li {
+      margin-bottom: 8px;
     }
 
-    .card .label {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: #eee;
-      color: #000;
-      padding: 4px 10px;
-      border-radius: 10px;
-      font-size: 0.8rem;
-      z-index: 2;
-    }
-
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover img {
-      transform: scale(1.05);
-    }
-    .cards .card .icon {
-      background-color: white;
-      border-radius: 50%;
-      padding: 10px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;      
-      color: 	#B65A2B;
-      font-size: 1.3rem;
-      font-weight: 900;
-
-    }
-    .card-text {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 400;
-
-    }
-    .card-text2 {
-      position: absolute;
-      top: 50px;      
-      left: 20px;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 400;
-    }
-
-    .card a {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      font-size: 2.5rem;
-      color: white;
+    .footer-column ul li a {
       text-decoration: none;
+      color: black;
+      font-weight: 300;
+      font-size: 1rem;
     }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #fff;
+    }
+
+
+
 
 
 
@@ -466,31 +352,53 @@
 
   .hero h1 {
     font-size: 2rem;
+    margin-top: 60px;
   }
 
-  .subscribe-box {
-    flex-direction: column;
-  }
-
-  .subscribe-box input,
-  .subscribe-box button {
-    padding: 12px;
-    width: 100%;
+  .hero p {
     font-size: 1rem;
   }
 
-  .card-text,
-  .card-text2 {
+  .hero-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-right p {
+    font-size: 1rem;
+  }
+
+  .locations-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-text, .card-text2 {
     font-size: 1.3rem;
   }
 
   nav ul {
     display: none;
   }
+  .member-button{
+    display: none;
+  }
 
   .hamburger-button {
     display: inline-block;
   }
+  
+  .separator{
+    display: none;
+  }
+
+    .text-overlay {
+    display: none; /* hide overlay */
+  }
+
+  .text-mobile {
+    display: block; /* show green section */
+  }
+
 }
 
 /* ================
@@ -499,19 +407,21 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .hero-content {
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 20px;
+    gap: 40px;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
-  .about {
-    padding: 40px 20px;
+  .hero-right h2 {
+    font-size: 2rem;
   }
 
-  .about-images {
-    flex-direction: column;
+  .locations-container {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   nav ul {
@@ -522,15 +432,16 @@
     display: inline-block;
   }
 
-  .card {
-    height: 280px;
+    .text-overlay {
+    display: none; /* hide overlay */
   }
 
-  .card-text,
-  .card-text2 {
-    font-size: 1.5rem;
+  .text-mobile {
+    display: block; /* show green section */
   }
+
 }
+
 
 /* ================
    3. TABLETS (769px–1024px)
@@ -539,113 +450,108 @@
   .hero-content {
     flex-direction: column;
     padding: 40px;
+    gap: 40px;
   }
 
   .hero h1 {
     font-size: 3rem;
   }
 
-  .about-images {
-    flex-direction: row;
-    gap: 20px;
-  }
-
   nav ul {
-    gap: 30px;
+    display: none;
   }
 
-  .card {
-    height: 320px;
+  .hamburger-button {
+    display: inline-block;
   }
+  .text-overlay {
+    display: none; /* hide overlay */
+  }
+
+  .text-mobile {
+    display: block; /* show green section */
+  }
+
 }
+
 
 /* ================
    4. LAPTOPS & SMALL DESKTOPS (1025px–1440px)
    ================ */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .hero-content {
-    padding: 60px 80px;
+    flex-direction: row;
   }
 
   .hero h1 {
     font-size: 3.5rem;
   }
 
-  .card {
-    height: 400px;
+  nav ul {
+    display: flex;
+    gap: 40px;
   }
+
+  .hamburger-button {
+    display: none;
+  }
+
+    .text-overlay {
+    display: none; /* hide overlay */
+  }
+
+  .text-mobile {
+    display: block; /* show green section */
+  }
+
+
 }
+
 
 /* ================
    5. LARGE DESKTOPS (≥ 1441px)
    ================ */
 @media (min-width: 1441px) {
   .hero-content {
-    max-width: 2000px;
-    margin: auto;
-    padding: 60px 100px;
-  }
-
-  .about {
-    max-width: 1600px;
-  }
-
-  section.cards {
-    max-width: 1600px;
+    margin-bottom: 20px;
   }
 
   .hero h1 {
     font-size: 4.5rem;
   }
 
-  .card {
-    height: 500px;
-  }
 
-  .card-text,
-  .card-text2 {
-    font-size: 2.2rem;
+
+  nav ul {
+    gap: 60px;
   }
 }
 
 
-@media (max-width: 1024px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .card {
-    width: 90vw;
-    max-width: 400px;
-    aspect-ratio: 7 / 8;
-    margin-bottom: 20px;
-
-  }
-}
 
 </style>
 </head>
 <body>
-<div class="hero-image">
+  <div class="hero-image">
     <nav>
-      <div style="display: flex; align-items: center; gap: 60px;">
+      <div style="display: flex; align-items: center; gap: 80px;">
         <div class="logo"><img src="logo.png"></div>
         <ul>
-          <li><a href="#"><img src="home-icon.png" class="nav-icon"> Home</a></li>
-          <li><a href="#"><img src="coach-icon.png" class="nav-icon"> Our Coaches</a></li>
-          <li><a href="#"><img src="updates-icon.png" class="nav-icon"> Updates</a></li>
-          <li><a href="#"><img src="contact-icon.png" class="nav-icon"> Contact Us</a></li>
+          <li><a href="Home.html"><img src="home.png" class="nav-icon"> Home</a></li>
+          <li><a href="coaches.html"><img src="coaches.png" class="nav-icon"> Our Coaches</a></li>
+          <li><a href="#"><img src="star.png" class="nav-icon"> Updates</a></li>
+          <li><a href="#contact"><img src="contact us.png" class="nav-icon"> Contact Us</a></li>
         </ul>
       </div>
       <div class="nav-buttons">
         <div class="dropdown">
           <button class="hamburger-button">☰ Menu</button>
           <div class="dropdown-content">
-            <a href="#">Home</a>
-            <a href="#">Our Coaches</a>
+            <a href="Home.html">Home</a>
+            <a href="coaches.html">Our Coaches</a>
             <a href="#">Updates</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
         <a href="#" class="member-button">Be a member</a>
@@ -653,14 +559,29 @@
     </nav>
 <div class="hero-content">
   <div class="hero">
-    <h1>HIT THEM TENNIS BALLS??</h1>
+    <h1>JAN</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <br><br><br>
+    <h3>Playing experience</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <br>
+    <h3>Coaching experience</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 
-    <div class="subscribe-box">
-      <input type="email" placeholder="Your email">
-      <button>Subscribe</button>
-    </div>
 
+
+  
+
+  </div>
+  <div class="hero-right">
+              
+    <h3>Coaching experience</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
     <div class="locations-container">
         <span class="location-item">Somerset<br>Court</span>
         <div class="separator"></div>
@@ -668,81 +589,117 @@
         <div class="separator"></div>
         <span class="location-item">Blairhill<br>Court</span>
         <div class="separator"></div>
-        <a href="#" class="more-courts-link">30+ more<br>quality courts</a>
-    </div>
-
-
-    <div class="socialmedia">
+        <span class="location-item">Blairhill<br>Court</span>    
+      
+      </div>
+         <a href="#" class="contact-button">Book a Lesson</a>
+  <div class="socialmedia">
         <a href="#"><img src="ig.png" alt=""></a>
         <a href="#"><img src="" alt=""></a>
     </div>
 
-
+    <div class="email">
+      <p>email :  janxotennis.com@gmail.com</p>
+    </div>
+    </div>
   </div>
-  <div class="hero-right">
-    <p>Train with the best coaches and reach your full potential. Become a part of our tennis family today!</p>
-  </div>
-
+</div>
 </div>
 
+    <div class="text-mobile">
+      <h1>JAN</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <br><br><br>
+    <h3>Playing experience</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <br>
+    <h3>Coaching experience</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+<h3>Coaching experience</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <div class="locations-container">
+        <span class="location-item">Somerset<br>Court</span>
+        <div class="separator"></div>
+        <span class="location-item">Admiralty<br>Court</span>
+        <div class="separator"></div>
+        <span class="location-item">Blairhill<br>Court</span>
+        <div class="separator"></div>
+        <span class="location-item">Blairhill<br>Court</span>    
+      
+      </div>
+         <a href="#" class="contact-button">Book a Lesson</a>
+  <div class="socialmedia">
+        <a href="#"><img src="ig.png" alt=""></a>
+        <a href="#"><img src="" alt=""></a>
+    </div>
+
+    <div class="email">
+      <p>email :  janxotennis.com@gmail.com</p>
+    </div>
+    </div>
 
 
-</div>
 
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p class="slogan">
+        <strong>Slogan Slogan</strong><br>
+        You play, we play, <br>
+        everyone plays. Yay!
+      </p>
+      <div class="footer-logo"><img src="logo.png"></div>
+            
 
-  <section class="about">
-  <div class="about-text">
-    <span>Our Mission</span>
-    <p>
-      At <strong>COMPANY</strong>, we are passionate about providing a top-notch environment for athletes of all levels.
-    </p>
-    <button>
-      Lorem Ipsum →
-    </button>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Facilities</h4>
+        <ul>
+          <li><a href="#">Court 123</a></li>
+          <li><a href="#">Court 245</a></li>
+          <li><a href="#">Court 346</a></li>
+          <li><a href="#">Court Sun</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Vision</a></li>
+          <li><a href="#">Our Coaches</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="about-images">
-    <div class="image-card">
-      <img src="6.jpg">
-      <div class="label">Our Mission</div>
-      <div class="text">Lorem ipsum lorem ipsum<br>Lorem Ipsum</div>
-      <div class="icon">↗</div>
 
-    </div>
-    <div class="image-card">
-      <img src="5.jpg">
-      <div class="label">Mission</div>
-      <div class="text">Lorem ipsum lorem ipsum<br>Lorem Ipsum</div>
-      <div class="icon">↗</div>
-    </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Janxo Sports. All rights reserved.</p>
   </div>
-</section>
+</footer>
 
-  <section class="cards">
 
-    <div class="card">
-      <img src="1.jpg" alt="">
-      <div class="label">Our Mission</div>
-      <div class="card-text2">Lorem Ipsum</div>
-    </div>
 
-    <div class="card">
-      <img src="2.jpg" alt="">
-      <div class="label">Our Mission</div>
-      <div class="card-text">Our Coaches</div>
-      <div class="icon">↗</div>
 
-    </div>
 
-    <div class="card">
-      <img src="3.jpg" alt="">
-      <div class="card-text">Testimonials</div>
-    </div>
 
-    <div class="card">
-      <img src="4.jpg" alt="">
-      <div class="card-text2">Our Facilities</div>
-    </div>
-  </section>
+
 </body>
 </html>
 
