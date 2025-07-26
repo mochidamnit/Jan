@@ -247,13 +247,14 @@
       }
 
 .text-mobile {
-  width: 100%;
   display: none; /* hidden by default */
-  background-color: #2b4335; /* green */
-  color: white;
-  padding: 2rem;
 }
-
+.left, .right {
+  flex: 1;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
     .site-footer {
       background-color: #cce6ff; /* light blue like your image */
@@ -474,7 +475,10 @@ display: none;
    ================ */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .hero-content {
-    flex-direction: row;
+    display: none;  
+}
+  .hero-image{
+    height: 60vh;
   }
 
   .hero h1 {
@@ -493,9 +497,44 @@ display: none;
     .text-overlay {
     display: none; /* hide overlay */
   }
-
   .text-mobile {
-    display: block; /* show green section */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem 2rem;
+    background-color: #2b4335;
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    max-width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+  }
+
+  .location-item {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .email,
+  .socialmedia {
+    margin-top: 20px;
   }
 
 
@@ -535,7 +574,7 @@ display: none;
           <li><a href="Home.html"><img src="home.png" class="nav-icon"> Home</a></li>
           <li><a href="coaches.html"><img src="coaches.png" class="nav-icon"> Our Coaches</a></li>
           <li><a href="#"><img src="star.png" class="nav-icon"> Updates</a></li>
-          <li><a href="#contact"><img src="contact us.png" class="nav-icon"> Contact Us</a></li>
+          <li><a href="home.html#contact"><img src="contact us.png" class="nav-icon"> Contact Us</a></li>
         </ul>
       </div>
       <div class="nav-buttons">
@@ -601,17 +640,20 @@ display: none;
 </div>
 
     <div class="text-mobile">
-      <h1>JAN</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-    <br><br><br>
-    <h3>Playing experience</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-    <br>
+      <div class="left">
+        <h1>JAN</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        <br><br><br>
+        <h3>Playing experience</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        <br>
+        <h3>Coaching experience</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+  <div class="right">            
     <h3>Coaching experience</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-<h3>Coaching experience</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna</p>
     <br>
@@ -625,9 +667,9 @@ display: none;
         <div class="separator"></div>
         <span class="location-item">Blairhill<br>Court</span>    
       
-      </div>
+    </div>
          <a href="#" class="contact-button">Book a Lesson</a>
-  <div class="socialmedia">
+    <div class="socialmedia">
         <a href="#"><img src="ig.png" alt=""></a>
         <a href="#"><img src="" alt=""></a>
     </div>
@@ -635,6 +677,9 @@ display: none;
     <div class="email">
       <p>email :  janxotennis.com@gmail.com</p>
     </div>
+    </div>
+
+
     </div>
 
 
